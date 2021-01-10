@@ -1,0 +1,220 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+button{font-family: 'Poppins', sans-serif;}
+
+/*----------header-------*/
+header{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+}
+
+/*-----Logo------*/
+.logo-container img, .cart img{
+    width: 30px;
+    height: 30px; 
+    font-weight: 400;  
+}
+
+.logo-container, .nav-links, .cart{
+    display: flex;
+}
+.logo-container {
+    flex: 1; 
+    cursor: pointer;  
+}
+.logo{
+    text-align: center;
+    margin: 10px 15px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/*--------Nav------*/
+nav{
+    flex: 2;
+}
+.nav-links{
+    list-style: none;
+    justify-content: space-around;
+}
+.nav-link{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+.nav-link:hover{
+    border: 1px solid #a72f93;
+    color: chartreuse;
+    background: linear-gradient(to right, #5a5a9e,#bd78b1);
+    padding: 5px;
+}
+
+        /*--Cart--*/
+.cart{
+    flex: 1;
+    justify-content: flex-end; 
+    cursor: pointer; 
+}
+
+/*---------------Section--------------*/
+       /*----Global----*/
+
+.presentation, .introduction, .cta
+       {display: flex;}
+
+       /*-----section----*/
+    
+.presentation{
+    width: 90%;
+    height: 90vh;
+    align-items: center;
+    margin: auto;
+} 
+.introduction{
+    text-align: center;
+    flex: 1;
+}
+.intro-text{
+    padding: 10px;
+}
+.intro-text h1{
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 18px;
+    background: linear-gradient(to right, #1c1c99,#a72f93);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+.intro-text p{
+    margin-top: 10px;
+    font-size: 22px;
+    color: rgb(67, 93, 143);
+}
+/*------------------Cta-----------------*/
+.cta{
+    padding: 50px 0 30px 0;
+    justify-content: center;
+}
+.cta-select, .cta-add{
+    border: 2px solid #a72f93;
+    font-size: 18px;
+    height: 50px;
+    width: 150px;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+ }
+ .cta-select:hover, .cta-add:hover{
+     background: linear-gradient(to right, #922988, #882727);
+     color: green;
+     
+ }
+ /*---------------Cover----------------*/
+ 
+ .cover img{
+     height: 100%;
+     width: 400px;
+     margin-bottom: 10px;
+     filter: drop-shadow(5px 5px 5px black);
+    } 
+/*----------------arrow----------------*/
+.arrow{
+    height: 3%;
+    width: 15%;
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    right: 17%;
+    bottom: 19%;
+}
+.arrow img{
+    cursor: pointer;
+}
+/*---------------@media----------------*/
+@media screen and (max-width:500px){
+    .presentation{
+        flex-direction: column;
+    }
+
+    main{height: 100vh;}
+    .introduction{flex-direction: column;}
+    .nav-links{
+        display: block;
+        padding: 10px 0 0 0;
+        text-align: center;
+        font-weight: 500;
+    }
+    .cta{
+        margin-left: 0;
+        margin-right: 0;
+
+    }
+    .cta-add, .cta-select{
+        width: 100px;
+        font-weight: 200;
+        font-size: small;
+    }
+    .cover img{width: 100%; padding-top: 20px;}
+    .arrow{
+        padding-top: 20px;
+        bottom: 5%;
+        right: 50%;
+        width: 50%;
+        transform: translate(50%, 5%);
+    }
+}
+
+@media screen and (max-width:1024px){
+    .logo-container{
+        font-size: 14px;
+    }
+    .nav-link{
+        font-size: 13px;
+    }
+    .nav-link:hover{
+        color: #bd78b1;
+    }
+    .cart img{
+        font-size: 14px;
+    }
+    .presentation{
+        flex-direction: column;
+    }
+    .introduction{
+        text-align: center;
+        margin: 5vh 0;
+    }
+    .intro-text h1{
+        font-size: 30px;
+    }
+    .intro-text p{
+        font-size: 18px;
+    }
+    .cta{
+        padding: 10px 0 0 0;
+    }
+    .cover img{
+        height: 40vh;
+        padding: 20px;
+    }
+    .arrow{
+        bottom: -5%;
+        right: 50%;
+        width: 50%;
+        transform: translate(50%, 5%);
+    }
+    span{
+        justify-content: center;
+        font-size: 60px;
+        font-weight: bold;
+        }
+}
+
+
+          
